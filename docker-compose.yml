@@ -1,0 +1,10 @@
+services:
+  zammadwinmaildatconverter:
+    build:
+      context: .
+      dockerfile: ZammadWinmailDatConverter/Dockerfile
+    environment:
+      ZammadHost: "https://zammad.example.com"
+      ZammadToken: "your-zammad-api-token"
+    volumes:
+      - ./winmaildat-lastcheck:/app/lastcheck
